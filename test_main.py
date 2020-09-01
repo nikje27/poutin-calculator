@@ -1,20 +1,27 @@
-import unittest
-from main import add
+from unittest import TestCase
+from main import divide, add, multiply, subtract
+
+class TestCalc(TestCase):
+
+    def test_divide(self):
+        self.assertEqual(divide(10, 5), 2)
+        self.assertEqual(divide(-1, 1), -1)
+        self.assertEqual(divide(-1, -1), 1)
+        self.assertEqual(divide(5, 2), 2.5)
+
+        with self.assertRaises(ValueError):
+            divide(10, 0)
 
 
-class TestCalc(unittest.TestCase):  # test case
-    """
-    Unit test for basic arithmetic operations
-    Credits: https://github.com/CoreyMSchafer/code_snippets/tree/master/Python-Unit-Testing
-    """
 
     def test_add(self):
-        self.assertEqual(main.add(10, 5), 15)
-        self.assertEqual(main.add(-1, 1), 0)
-        self.assertEqual(main.add(-1, -1), -2)
+        self.assertEqual(add(10, 5), 15)
+        self.assertEqual(add(-1, 1), 0)
+        self.assertEqual(add(-1, -1), -2)
 
 
 
 
 if __name__ == '__main__':
     unittest.main()
+
