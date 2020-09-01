@@ -12,7 +12,7 @@ class TestCalc(TestCase):
         with self.assertRaises(ValueError):
             divide(10, 0)
             
-    def substract(self):
+    def test_substract(self):
         self.assertEqual(subtract(10, 5), 5)
         self.assertEqual(subtract(-1, 1), -2)
         self.assertEqual(subtract(-1, -1), 0)
