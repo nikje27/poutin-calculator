@@ -13,9 +13,9 @@ class TestCalc(TestCase):
             divide(10, 0)
 
     def test_multiply(self):
-        self.assertEqual(main.multiply(10, 5), 50)
-        self.assertEqual(main.multiply(-1, 1), -1)
-        self.assertEqual(main.multiply(-1, -1), 1)
+        self.assertEqual(multiply(10, 5), 50)
+        self.assertEqual(multiply(-1, 1), -1)
+        self.assertEqual(multiply(-1, -1), 1)
 
     def test_add(self):
         self.assertEqual(add(10, 5), 15)
