@@ -1,5 +1,5 @@
 import unittest
-import calc
+from main import add
 
 
 class TestCalc(unittest.TestCase):  # test case
@@ -9,9 +9,9 @@ class TestCalc(unittest.TestCase):  # test case
     """
 
     def test_add(self):
-        self.assertEqual(calc.add(10, 5), 15)
-        self.assertEqual(calc.add(-1, 1), 0)
-        self.assertEqual(calc.add(-1, -1), -2)
+        self.assertEqual(main.add(10, 5), 15)
+        self.assertEqual(main.add(-1, 1), 0)
+        self.assertEqual(main.add(-1, -1), -2)
 
 
 
